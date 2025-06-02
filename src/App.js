@@ -73,7 +73,7 @@ class App extends Component {
 
     onSubmit = () => {
       this.setState({ imageUrl: this.state.input });
-      fetch('http://localhost:3000/clarifai' /* 'https://facedetectbackend-x640.onrender.com/clarifai' */, {
+      fetch(/* 'http://localhost:3000/clarifai'  */ 'https://facedetectback.onrender.com/clarifai', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ imageUrl: this.state.input })
@@ -83,7 +83,7 @@ class App extends Component {
                console.log('Face detection response:', response);
               if (response) {
                   this.displayFaceBox(this.calculateFaceLocation(response));
-                  fetch( 'http://localhost:3000/image'/* 'https://facedetectbackend-x640.onrender.com/image' */, {
+                  fetch( /* 'http://localhost:3000/image' */'https://facedetectback.onrender.com/image', {
                       method: 'PUT',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({ id: this.state.user.id })
