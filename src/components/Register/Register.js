@@ -32,14 +32,17 @@ import React from 'react';
         name: this.state.name
       })
     })
+    
       .then(response => response.json())
       .then(user => {
         if (user.id) {
           this.props.loadUser(user)
           this.props.onRouteChange('home');
-        }
+        } 
+        console.log('Submitting:', this.state.name, this.state.email, this.state.password);
       })
   }
+  
       render() {
         /* const { onRouteChange } = this.props; */
         return (
