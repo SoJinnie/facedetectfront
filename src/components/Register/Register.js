@@ -23,7 +23,7 @@ import React from 'react';
   }
 
   onSubmitRegister = () => {
-    fetch('https://facedetectback.onrender.com/register' /* 'http://localhost:3000/register' */ , {
+    fetch('https://facedetectback.onrender.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
