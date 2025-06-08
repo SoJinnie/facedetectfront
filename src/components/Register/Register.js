@@ -39,7 +39,6 @@ import React from 'react';
           this.props.loadUser(user)
           this.props.onRouteChange('home');
         } 
-        console.log('Submitting:', this.state.name, this.state.email, this.state.password);
       })
   }
   
